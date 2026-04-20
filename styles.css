@@ -1,0 +1,45 @@
+
+.hero-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+body {
+    /* Añadimos espacio abajo para que el footer fijo no tape el contenido */
+    padding-bottom: 60px; 
+}
+
+/* Ajuste para que el sidebar también respete el footer si es necesario */
+#sidebarMenu {
+    padding-bottom: 60px;
+}
+
+/* Media query para pantallas grandes (Escritorio) */
+@media (min-width: 768px) {
+    .footer-custom {
+        /* El footer medirá el 100% menos las columnas del sidebar (col-md-3 es aprox 25%) */
+        width: calc(100% - 25%); 
+        left: 25%; /* Se desplaza justo donde termina el sidebar */
+    }
+}
+
+/* Ajuste para pantallas muy grandes (col-lg-2 es aprox 16.66%) */
+@media (min-width: 992px) {
+    .footer-custom {
+        width: calc(100% - 16.666667%);
+        left: 16.666667%;
+    }
+}
+
+/* En móviles, el footer ocupa todo el ancho */
+@media (max-width: 767.98px) {
+    .footer-custom {
+        width: 100%;
+        left: 0;
+    }
+}
